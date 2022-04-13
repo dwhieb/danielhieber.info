@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@dwhieb/eslint-config": "^3.0.1",
+    "eslint": "^8.13.0"
+  }
+}

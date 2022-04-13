@@ -1,0 +1,2 @@
+extends:
+  - '@dwhieb/eslint-config'
