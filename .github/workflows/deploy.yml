@@ -35,6 +35,5 @@ jobs:
       - name: publish to GitHub pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          cname:          danielhieber.info
           github_token:   ${{ secrets.GITHUB_TOKEN }}
           publish_dir:    site
