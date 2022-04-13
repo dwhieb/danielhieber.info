@@ -1,0 +1,33 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs
+  deploy:
+    name:    build and deploy
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: install packages
+        run:  npm ci
+
+      - name: build site
+        run:  npm run build
+
+      - name: publish to GitHub pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          cname:          danielhieber.info
+          github_token:   ${{ secrets.GITHUB_TOKEN }}
+          publish_dir:    site
