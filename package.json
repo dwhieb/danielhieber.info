@@ -20,6 +20,7 @@
     "node": ">=16.x"
   },
   "scripts": {
+    "build": "npx @11ty/eleventy --config=.eleventy.cjs",
     "test": "mocha *.test.js"
   },
   "devDependencies": {
