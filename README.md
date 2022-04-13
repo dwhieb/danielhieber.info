@@ -1,3 +1,3 @@
 # danielhieber.info
 
-The academic website for Daniel W. Hieber (Ph.D.), diversity linguist.
+The academic website of Daniel W. Hieber, Ph.D., diversity linguist.

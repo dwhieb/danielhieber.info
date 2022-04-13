@@ -1,5 +1,24 @@
 {
+  "name": "@dwhieb/danielhieber.info",
+  "version": "0.1.0",
+  "description": "The academic website of Daniel W. Hieber, Ph.D., diversity linguist.",
+  "keywords": [
+    "linguistics",
+    "language",
+    "linguist",
+    "science",
+    "research"
+  ],
+  "homepage": "https://github.com/dwhieb/danielhieber.info",
+  "bugs": "https://github.com/dwhieb/danielhieber.info/issues",
+  "license": "MIT",
+  "author": "Daniel W. Hieber <dwhieb@gmail.com> (https://danielhieber.info)",
+  "repository": "github:dwhieb/danielhieber.info",
+  "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=16.x"
+  },
   "scripts": {
     "test": "mocha *.test.js"
   },
