@@ -2,6 +2,8 @@
   "type": "module",
   "devDependencies": {
     "@dwhieb/eslint-config": "^3.0.1",
-    "eslint": "^8.13.0"
+    "chai": "^4.3.6",
+    "eslint": "^8.13.0",
+    "mocha": "^9.2.2"
   }
 }
