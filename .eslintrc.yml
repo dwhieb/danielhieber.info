@@ -1,2 +1,5 @@
 extends:
   - '@dwhieb/eslint-config'
+
+env:
+  mocha: true

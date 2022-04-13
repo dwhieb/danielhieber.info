@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "scripts": {
+    "test": "mocha *.test.js"
+  },
   "devDependencies": {
     "@dwhieb/eslint-config": "^3.0.1",
     "chai": "^4.3.6",
