@@ -20,7 +20,7 @@
     "node": ">=16.x"
   },
   "scripts": {
-    "build": "npx @11ty/eleventy --config=.eleventy.cjs",
+    "build": "node build/emptySiteDir.js & npx @11ty/eleventy --config=.eleventy.cjs",
     "test": "mocha *.test.js"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
     "@dwhieb/eslint-config": "^3.1.0",
     "chai": "^4.3.6",
     "eslint": "^8.13.0",
+    "fs-extra": "^10.0.1",
     "mocha": "^9.2.2"
   }
 }
