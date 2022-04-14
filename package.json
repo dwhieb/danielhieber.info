@@ -11,7 +11,7 @@
   ],
   "homepage": "https://github.com/dwhieb/danielhieber.info",
   "bugs": "https://github.com/dwhieb/danielhieber.info/issues",
-  "license": "MIT",
+  "license": "ISC",
   "author": "Daniel W. Hieber <dwhieb@gmail.com> (https://danielhieber.info)",
   "repository": "github:dwhieb/danielhieber.info",
   "private": true,
