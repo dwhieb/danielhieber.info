@@ -11,7 +11,7 @@ module.exports = function eleventy(config) {
       layouts : `layouts`,
       output  : `site`,
     },
-    templateFormats: [`hbs`, `ico`, `md`],
+    templateFormats: [`ico`, `md`, `njk`],
   }
 
 }

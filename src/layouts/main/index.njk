@@ -2,21 +2,21 @@
 <html lang='en'>
 <head>
 
-  {{!-- critical metadata --}}
+  {# critical metadata #}
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
   <title>Daniel W. Hieber | {{ title }}</title>
 
-  {{!-- metadata --}}
+  {# metadata #}
   <meta name='author' content='{{ pkg.author.name }}'>
   <meta name='description' content='{{ description }}'>
   <meta name='rating' content='general'>
 
-  {{!-- linked metadata --}}
+  {# linked metadata #}
   <link rel='author' href='https://danielhieber.info'>
   <link rel='license' href='https://github.com/dwhieb/danielhieber.info/#license'>
 
-  {{!-- open graph tags --}}
+  {# open graph tags #}
   <meta property='og:description' content='{{ description }}'>
   <meta property='og:image' content='https://danielhieber.info/images/social.jpg'>
   <meta property='og:image:alt' content='Headshot of Daniel Hieber'>
@@ -27,17 +27,20 @@
   <meta property='og:title' content='Daniel W. Hieber | {{ title }}'>
   <meta property='og:type' content='website'>
   <meta property='og:url' content='https://danielhieber.info{{ page.url }}'>
-
-  {{!-- Twitter sharing --}}
   <meta name='twitter:card' content='summary'>
   <meta name='twitter:creator' content='@dwhieb'>
   <meta name='twitter:site' content='@dwhieb'>
 
-  {{!-- favicon --}}
+  {# favicon #}
   <link rel='icon' href='favicon.svg' type='image/svg+xml'>
 
 </head>
 <body>
-  {{{ content }}}
+
+  {% include './header.njk' %}
+  {% include './nav.njk' %}
+  {{ content | safe }}
+  {% include './footer.njk' %}
+
 </body>
 </html>

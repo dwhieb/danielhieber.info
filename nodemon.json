@@ -1,3 +1,3 @@
 {
-  "ext": "cjs,hbs,js,json,md"
+  "ext": "cjs,hbs,js,json,md,njk"
 }
