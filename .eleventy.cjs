@@ -1,4 +1,7 @@
 module.exports = function eleventy(config) {
+
+  config.addPassthroughCopy(`src/images/*.jpg`)
+
   return {
     dir: {
       data    : `data`,
@@ -9,4 +12,5 @@ module.exports = function eleventy(config) {
     },
     templateFormats: [`hbs`, `ico`, `md`],
   }
+
 }

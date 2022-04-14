@@ -12,7 +12,10 @@
   "homepage": "https://github.com/dwhieb/danielhieber.info",
   "bugs": "https://github.com/dwhieb/danielhieber.info/issues",
   "license": "ISC",
-  "author": "Daniel W. Hieber <dwhieb@gmail.com> (https://danielhieber.info)",
+  "author": {
+    "name": "Daniel W. Hieber",
+    "url": "https://danielhieber.info"
+  },
   "repository": "github:dwhieb/danielhieber.info",
   "private": true,
   "type": "module",
@@ -20,8 +23,11 @@
     "node": ">=16.x"
   },
   "scripts": {
-    "build": "node build/emptySiteDir.js & npx @11ty/eleventy --config=.eleventy.cjs",
-    "test": "mocha *.test.js"
+    "prebuild": "node build/emptySiteDir.js",
+    "build": "npx @11ty/eleventy --config=.eleventy.cjs",
+    "test": "mocha *.test.js",
+    "prestart": "npm run prebuild",
+    "start": "npx @11ty/eleventy --config=.eleventy.cjs --serve --port=3003"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
