@@ -15,9 +15,9 @@ const minifyOptions = {
   removeComments       : true,
 }
 
-async function convertLESS(input) {
-  const { css } = await less.render(input, lessOptions)
-  return css;
+function convertLESS(input, cb) {
+  less.render(input, lessOptions)
+  .then(({ css }) => cb(null, css))
 }
 
 function minifyHTML(content) {
@@ -34,7 +34,7 @@ function minifyHTML(content) {
 
 module.exports = function eleventy(config) {
 
-  config.addFilter(`less`, convertLESS)
+  config.addNunjucksAsyncFilter(`css`, convertLESS)
   config.addPassthroughCopy(`src/favicon.svg`)
   config.addPassthroughCopy(`src/images/*.jpg`)
   config.addTransform(`min-html`, minifyHTML)

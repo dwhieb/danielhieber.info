@@ -18,7 +18,7 @@ Include LESS files as follows:
 {% endcapture %}
 
 <style>
-  {{ css | less | min-css }}
+  {{ css | less | safe }}
 </style>
 ```
 
@@ -30,7 +30,7 @@ Include LESS files as follows:
 {% endset %}
 
 <style>
-  {{ css | less | min-css }}
+  {{ css | less }}
 </style>
 ```
 

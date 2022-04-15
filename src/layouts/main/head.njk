@@ -30,4 +30,14 @@
 
   {# favicon #}
   <link rel='icon' href='favicon.svg' type='image/svg+xml'>
+
+  {# CSS for main layout #}
+  {% set less %}
+    {% include './index.less' %}
+  {% endset %}
+
+  <style>
+    {{ less | css | safe }}
+  </style>
+
 </head>
