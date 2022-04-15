@@ -1,3 +1,4 @@
 {
-  "ext": "cjs,hbs,js,json,md,njk"
+  "exec": "npm run build",
+  "ext": "cjs,hbs,js,json,less,md,njk"
 }
