@@ -1,11 +1,18 @@
-const CleanCSS    = require(`clean-css`)
 const { extname } = require(`path`)
 const less        = require(`less`)
-
-const cleanCSS = new CleanCSS
+const minifier    = require(`html-minifier`)
 
 const lessOptions = {
   paths: [],
+}
+
+const minifyOptions = {
+  collapseWhitespace   : true,
+  quoteCharacter       : `'`,
+  minifyCSS            : true,
+  minifyJS             : true,
+  removeAttributeQuotes: true,
+  removeComments       : true,
 }
 
 async function convertLESS(input) {
@@ -13,16 +20,24 @@ async function convertLESS(input) {
   return css;
 }
 
-function minifyCSS(css) {
-  return cleanCSS.minify(css).styles;
+function minifyHTML(content) {
+
+  const ext = extname(this.outputPath)
+
+  if (ext === `.html`) {
+    return minifier.minify(content, minifyOptions)
+  }
+
+  return content;
+
 }
 
 module.exports = function eleventy(config) {
 
-  config.addFilter(`min-css`, minifyCSS)
   config.addFilter(`less`, convertLESS)
   config.addPassthroughCopy(`src/favicon.svg`)
   config.addPassthroughCopy(`src/images/*.jpg`)
+  config.addTransform(`min-html`, minifyHTML)
 
   return {
     dir: {
