@@ -5,6 +5,7 @@ const minifier    = require(`html-minifier`)
 const lessOptions = {
   paths: [
     `src/fonts`,
+    `src/layouts/main`,
   ],
 }
 
