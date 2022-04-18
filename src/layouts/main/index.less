@@ -18,8 +18,11 @@
   z-index: 9999;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  box-sizing     : border-box;
   flex-direction : column;
   font-family    : var(--font);
   line-height    : 1.5;
@@ -29,4 +32,12 @@ body {
 
 main {
   flex-grow: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
 }

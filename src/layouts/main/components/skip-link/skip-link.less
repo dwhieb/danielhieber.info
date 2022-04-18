@@ -2,7 +2,6 @@
 
 .skip-link {
 
-  background-color: white;
   border-radius   : var(--border-radius);
   border          : var(--border-thickness) solid black;
   margin          : var(--space-xs);
@@ -19,6 +18,10 @@
 
   &:not(:focus) {
     .visually-hidden;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background-color: white;
   }
 
 }

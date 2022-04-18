@@ -10,7 +10,12 @@ const lessOptions = {
 }
 
 const minifyOptions = {
-  collapseWhitespace   : true,
+  ignoreCustomFragments: [
+    // These rules are necessary because html-minifier removes this whitespace otherwise,
+    // creating invalid CSS. See https://github.com/kangax/html-minifier/issues/1127.
+    /svg \*/u,
+    /symbol \*/u,
+  ],
   quoteCharacter       : `'`,
   minifyCSS            : true,
   minifyJS             : true,
