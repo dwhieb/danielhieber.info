@@ -1,3 +1,16 @@
+// Globals
 @import 'node_modules/flexbox-reset/flexbox-reset.less';
-@import 'fonts.less';
-@import 'typography.less';
+@import 'fonts/fonts.less';
+@import 'styles/spacing.less';
+@import 'styles/typography.less';
+@import 'styles/utilities.less';
+
+:focus {
+  // focus styles should always have the highest z-index
+  z-index: 9999;
+}
+
+body {
+  font-family: var(--font);
+  line-height: 1.5;
+}
