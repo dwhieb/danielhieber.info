@@ -3,6 +3,7 @@
 @import 'node_modules/flexbox-reset/flexbox-reset.less';
 @import 'fonts/fonts.less';
 @import 'styles/borders.less';
+@import 'styles/colors.less';
 @import 'styles/spacing.less';
 @import 'styles/typography.less';
 @import 'styles/utilities.less';
@@ -32,6 +33,13 @@ body {
 
 main {
   flex-grow: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark);
+    color           : var(--text-color-dark);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
