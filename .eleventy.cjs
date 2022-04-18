@@ -3,7 +3,9 @@ const less        = require(`less`)
 const minifier    = require(`html-minifier`)
 
 const lessOptions = {
-  paths: [],
+  paths: [
+    `src/fonts`,
+  ],
 }
 
 const minifyOptions = {
@@ -36,6 +38,7 @@ module.exports = function eleventy(config) {
 
   config.addNunjucksAsyncFilter(`css`, convertLESS)
   config.addPassthroughCopy(`src/favicon.svg`)
+  config.addPassthroughCopy(`src/fonts/**/*.woff2`)
   config.addPassthroughCopy(`src/images/*.jpg`)
   config.addTransform(`min-html`, minifyHTML)
 
