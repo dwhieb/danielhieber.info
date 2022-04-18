@@ -1,3 +1,69 @@
+@external-link-black: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+@external-link-white: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+
 .link {
+
+  color                    : var(--primary);
+  text-decoration          : underline;
+  text-decoration-skip-ink : auto;
+  text-decoration-style    : dotted;
+  text-underline-offset    : 0.075em;
+  text-decoration-thickness: 0.125em;
+
+  &:hover {
+    text-decoration-style: solid;
+  }
+
+  &:visited {
+    color: var(--secondary);
+  }
+
+  &:not([href*='danielhieber.info'], [href^='#'], [href^='/']) {
+
+    --icon-size: 0.8em;
+
+    &::after {
+      background-image   :
+        linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+        url(@external-link-black);
+      background-repeat  : no-repeat;
+      background-position: center;
+      background-size    : contain;
+      content            : '';
+      display            : inline-block;
+      margin-inline-start: 0.25em;
+      block-size         : var(--icon-size);
+      inline-size        : var(--icon-size);
+    }
+
+    &:hover::after {
+      background-image: url(@external-link-black);
+    }
+
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    color: var(--primary-dark);
+
+    &:visited {
+      color: var(--secondary-dark);
+    }
+
+    &:not([href*='danielhieber.info'], [href^='#'], [href^='/']) {
+
+      &::after {
+        background-image :
+          linear-gradient(rgba(18, 18, 18, 0.3), rgba(18, 18, 18, 0.3)),
+          url(@external-link-white);
+      }
+
+      &:hover::after {
+        background-image: url(@external-link-white);
+      }
+
+    }
+
+  }
 
 }

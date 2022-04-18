@@ -1,11 +1,15 @@
+@import (reference) 'styles/link.less';
 @import (reference) 'styles/utilities.less';
 
 .skip-link {
 
-  border-radius: var(--border-radius);
-  margin       : var(--space-xs);
-  padding      : var(--text-padding);
-  position     : absolute;
+  // Apply this here rather than in the HTML to avoid specificity issues.
+  .link;
+
+  border-radius        : var(--border-radius);
+  margin               : var(--space-xs);
+  padding              : var(--text-padding);
+  position             : absolute;
 
   &:focus {
     outline: none;

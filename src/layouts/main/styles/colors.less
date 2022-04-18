@@ -1,4 +1,24 @@
 :root {
+
   --background-color-dark: #121212;
   --text-color-dark      : #EEE;
+
+  --blue-hue       : 213;
+  --blue-saturation: 87%;
+  --blue-lightness : 45%;
+
+  --purple-hue       : 273;
+  --purple-saturation: 75%;
+  --purple-lightness : 54%;
+
+  --green: hsl(93 98% 32%);   // #4AA002
+  --pink : hsl(333 92% 45%);  // #DC0969
+  --red  : hsl(3 80% 41%);    // #BD1D15
+
+  --primary     : hsl(var(--blue-hue) var(--blue-saturation) var(--blue-lightness));
+  --primary-dark: hsl(var(--blue-hue) var(--blue-saturation) calc(var(--blue-lightness) + 20%));
+
+  --secondary     : hsl(var(--purple-hue) var(--purple-saturation) var(--purple-lightness));
+  --secondary-dark: hsl(var(--purple-hue) var(--purple-saturation) calc(var(--purple-lightness) + 20%));
+
 }
