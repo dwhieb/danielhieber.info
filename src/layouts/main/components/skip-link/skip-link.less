@@ -1,0 +1,24 @@
+@import (reference) 'styles/utilities.less';
+
+.skip-link {
+
+  background-color: white;
+  border-radius   : var(--border-radius);
+  border          : var(--border-thickness) solid black;
+  margin          : var(--space-xs);
+  padding         : var(--text-padding);
+  position        : absolute;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: white;
+  }
+
+  &:not(:focus) {
+    .visually-hidden;
+  }
+
+}

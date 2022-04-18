@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang='en'>
-{% include './head.njk' %}
+{% include './components/head.njk' %}
 <body>
-  {% include './header.njk' %}
-  {% include './nav.njk' %}
+  {% include './components/skip-link/skip-link.njk' %}
+  {% include './components/header.njk' %}
+  {% include './components/nav.njk' %}
   {{ content | safe }}
-  {% include './footer.njk' %}
+  {% include './components/footer.njk' %}
 </body>
 </html>
