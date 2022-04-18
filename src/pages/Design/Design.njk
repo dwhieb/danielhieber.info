@@ -1,0 +1,31 @@
+---
+title      : Design
+permalink  : /design/
+description: The design system for danielhieber.info
+---
+{% set less %}
+  {% include './Design.less' %}
+{% endset %}
+
+{# Don't include styles for this page in the main layout. #}
+<style>
+  {{ less | css | safe }}
+</style>
+
+<main id=main class=design-page>
+
+  <h1 class=page-title>Design</h1>
+
+  <section>
+    <h2 class=section-header>Introduction</h2>
+    <p>The design system for <a class=link href=https://danielhieber.info>danielhieber.info</a>.</p>
+  </section>
+
+  <section>
+    <h2 class=section-header>Link</h2>
+    <p>This is a paragraph with a <a class=link href=/cv>link</a> in it.</p>
+    <p>This is a paragraph with a <a class=link href=#>same-page link</a> in it.</p>
+    <p>This is a paragraph with an <a class=link href=https://linguisticdiscovery.com>external link</a> in it.</p>
+  </section>
+
+</main>
