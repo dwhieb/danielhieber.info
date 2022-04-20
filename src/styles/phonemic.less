@@ -1,0 +1,17 @@
+@import (reference) 'transcription.less';
+
+.phon {
+
+  .txn;
+
+  &::before {
+    content: '/';
+    padding-right: var(--txn-padding);
+  }
+
+  &::after {
+    content: '/';
+    padding-left: var(--txn-padding);
+  }
+
+}

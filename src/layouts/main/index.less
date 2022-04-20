@@ -11,45 +11,14 @@
 // Components
 
 @import 'components/skip-link/skip-link.less';
+@import 'components/banner/banner.less';
 
 // Classes
 
 @import 'styles/link.less';
+@import 'styles/transcription.less';
+@import 'styles/phonemic.less';
 
 // Layout
 
-:focus {
-  // focus styles should always have the highest z-index
-  z-index: 9999;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  flex-direction : column;
-  font-family    : var(--font);
-  line-height    : 1.5;
-  min-block-size : 100vh;
-  min-inline-size: 100vw;
-}
-
-main {
-  flex-grow: 1;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--background-color-dark);
-    color           : var(--text-color-dark);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-}
+@import 'styles/layout.less';

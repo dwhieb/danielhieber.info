@@ -45,8 +45,7 @@ module.exports = function eleventy(config) {
   config.addNunjucksAsyncFilter(`css`, convertLESS)
   config.addPassthroughCopy(`src/favicon.svg`)
   config.addPassthroughCopy(`src/fonts/**/*.woff2`)
-  config.addPassthroughCopy(`src/images/*.jpg`)
-  config.addPassthroughCopy(`src/images/*.svg`)
+  config.addPassthroughCopy(`src/images`)
   config.addTransform(`min-html`, minifyHTML)
 
   return {

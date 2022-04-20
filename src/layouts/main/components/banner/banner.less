@@ -1,0 +1,38 @@
+.banner {
+
+  align-items    : center;
+  background     :
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/images/Lake-Louise.webp) no-repeat center center;
+  background-size: cover;
+  color          : white;
+  flex-direction : column;
+  padding        : var(--space-xl);
+  text-align     : center;
+  text-shadow    : 0.1em 0.1em 0.1em black;
+
+  .name-eng {
+    font-family: 'Libertinus Display', var(--font-unicode);
+    font-size  : 4em;
+    position   : relative;
+  }
+
+  .name-ipa {
+    font-family: 'Libertinus Display', var(--font-unicode);
+    font-size:   xx-large;
+  }
+
+  small {
+    font-size          : x-large;
+    inset-block-end    : 0.75em;
+    margin-inline-start: 0.5em;
+    position           : absolute;
+  }
+
+  .tagline {
+    font-weight: 300;
+    font-size  : x-large;
+    padding    : var(--text-padding-lg);
+  }
+
+}
