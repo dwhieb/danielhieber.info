@@ -2,7 +2,12 @@ const { extname } = require(`path`)
 const less        = require(`less`)
 const minifier    = require(`html-minifier`)
 
+const pathPrefix = process.env.GITHUB_ACTIONS ? `danielhieber.info/` : `/`;
+
 const lessOptions = {
+  globalVars: {
+    pathPrefix,
+  },
   paths: [
     `src`,
     `src/layouts/main`,
@@ -41,8 +46,6 @@ function minifyHTML(content) {
 }
 
 module.exports = function eleventy(config) {
-
-  const pathPrefix = process.env.GITHUB_ACTIONS ? `/danielhieber.info` : ``;
 
   config.addNunjucksAsyncFilter(`css`, convertLESS)
   config.addPassthroughCopy(`src/favicon.svg`)
