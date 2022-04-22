@@ -2,14 +2,12 @@ const { extname } = require(`path`)
 const less        = require(`less`)
 const minifier    = require(`html-minifier`)
 
-// These values need to be wrapped in quotes in order for the LESS files to compile.
-// This is because LESS outputs the bare text of the variable, which would result
-// in an unquote path/url, which is invalid CSS.
-const pathPrefix = process.env.GITHUB_ACTIONS ? `'/danielhieber.info'` : `''`;
-
 const lessOptions = {
   globalVars: {
-    pathPrefix,
+    // These values need to be wrapped in quotes in order for the LESS files to compile.
+    // This is because LESS outputs the bare text of the variable, which would result
+    // in an unquote path/url, which is invalid CSS.
+    pathPrefix: process.env.GITHUB_ACTIONS ? `'/danielhieber.info'` : `''`,
   },
   paths: [
     `src`,
@@ -63,8 +61,8 @@ module.exports = function eleventy(config) {
       input   : `src`,
       layouts : `layouts`,
       output  : `site`,
-      pathPrefix,
     },
+    pathPrefix     : process.env.GITHUB_ACTIONS ? `danielhieber.info`: ``,
     templateFormats: [`ico`, `md`, `njk`],
   }
 
