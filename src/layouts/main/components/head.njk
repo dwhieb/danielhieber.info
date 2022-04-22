@@ -29,7 +29,7 @@
   <meta name='twitter:site' content='@dwhieb'>
 
   {# favicon #}
-  <link rel='icon' href='favicon.svg' type='image/svg+xml'>
+  <link rel='icon' href='{{ 'favicon.svg' | url }}' type='image/svg+xml'>
 
   {# CSS for main layout #}
   {% set less %}
@@ -38,10 +38,10 @@
 
   {# preload critical assets #}
   {% if not page.url == '/cv/' %}
-    <link rel='preload' href='/images/Lake-Louise.webp' as='image' type='image/webp'>
+    <link rel='preload' href={{ '/images/Lake-Louise.webp' | url }} as='image' type='image/webp'>
   {% endif %}
-  <link rel='preload' href='/fonts/Libertinus/LibertinusSerifDisplay-Regular.woff2' as='font' type='font/woff2' crossorigin>
-  <link rel='preload' href='/fonts/FiraSans/FiraSans-Light.woff2' as='font' type='font/woff2' crossorigin>
+  <link rel='preload' href={{ '/fonts/Libertinus/LibertinusSerifDisplay-Regular.woff2' | url }} as='font' type='font/woff2' crossorigin>
+  <link rel='preload' href={{ '/fonts/FiraSans/FiraSans-Light.woff2' | url }} as='font' type='font/woff2' crossorigin>
 
   <style>
     {{ less | css | safe }}

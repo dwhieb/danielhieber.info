@@ -5,23 +5,23 @@
     <h2>Menu</h2>
   </label>
 
-  <input id=nav-toggle type=checkbox>
+  <input id='nav-toggle' type='checkbox'>
 
   <ul>
     <li {{ 'class=current aria-current=page' if page.url == '/' }}>
-      <a href='/'>
+      <a {{ "href=#" if page.url == '/' else "href=/" }}>
         <span lang=en>Home</span>
         <span class=phon lang=en-fonipa-x-emic>hoᶷm</span>
       </a>
     </li>
     <li {{ 'class=current aria-current=page' if page.url == '/research/' }}>
-      <a href=/research>
+      <a {{ "href=#" if page.url == '/research/' else "href=/research" }}>
         <span lang=en>Research</span>
         <span class=phon lang=en-fonipa-x-emic>ɹisɚt͡ʃ</span>
       </a>
     </li>
     <li {{ 'class=current aria-current=page' if page.url == '/cv/' }}>
-      <a href=/cv>
+      <a {{ "href=#" if page.url == '/cv/' else "href=/cv" }}>
         <span lang=en>Curriculum Vitae</span>
         <span class=phon lang=en-fonipa-x-emic>kəɹɪkjələm vitaᶦ</span>
       </a>
@@ -39,13 +39,13 @@
       </a>
     </li>
     <li {{ 'class=current aria-current=page' if page.url == '/about/' }}>
-      <a href=/about>
+      <a {{ "href=#" if page.url == '/about/' else "href=/about" }}>
         <span lang=en>About</span>
         <span class=phon lang=en-fonipa-x-emic>əbaᶷt</span>
       </a>
     </li>
     <li {{ 'class=current aria-current=page' if page.url == '/contact/' }}>
-      <a href=/contact>
+      <a {{ "href=#" if page.url == '/contact/' else "href=/contact" }}>
         <span lang=en>Contact</span>
         <span class=phon lang=en-fonipa-x-emic>kɑntækt</span>
       </a>

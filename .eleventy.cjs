@@ -42,6 +42,8 @@ function minifyHTML(content) {
 
 module.exports = function eleventy(config) {
 
+  const pathPrefix = process.env.GITHUB_ACTIONS ? `/danielhieber.info` : ``;
+
   config.addNunjucksAsyncFilter(`css`, convertLESS)
   config.addPassthroughCopy(`src/favicon.svg`)
   config.addPassthroughCopy(`src/fonts/**/*.woff2`)
@@ -55,6 +57,7 @@ module.exports = function eleventy(config) {
       input   : `src`,
       layouts : `layouts`,
       output  : `site`,
+      pathPrefix,
     },
     templateFormats: [`ico`, `md`, `njk`],
   }
