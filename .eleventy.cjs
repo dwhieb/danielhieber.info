@@ -2,7 +2,10 @@ const { extname } = require(`path`)
 const less        = require(`less`)
 const minifier    = require(`html-minifier`)
 
-const pathPrefix = process.env.GITHUB_ACTIONS ? `danielhieber.info/` : `/`;
+// These values need to be wrapped in quotes in order for the LESS files to compile.
+// This is because LESS outputs the bare text of the variable, which would result
+// in an unquote path/url, which is invalid CSS.
+const pathPrefix = process.env.GITHUB_ACTIONS ? `'/danielhieber.info'` : `''`;
 
 const lessOptions = {
   globalVars: {
