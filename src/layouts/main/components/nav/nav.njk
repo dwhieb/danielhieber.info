@@ -1,0 +1,55 @@
+<nav class=nav>
+
+  <label class=toggle-button for=nav-toggle>
+    <img class=menu-icon src=/images/menu.svg alt=''>
+    <h2>Menu</h2>
+  </label>
+
+  <input id=nav-toggle type=checkbox>
+
+  <ul>
+    <li {{ 'class=current aria-current=page' if page.url == '/' }}>
+      <a href='/'>
+        <span lang=en>Home</span>
+        <span class=phon lang=en-fonipa-x-emic>hoᶷm</span>
+      </a>
+    </li>
+    <li {{ 'class=current aria-current=page' if page.url == '/research/' }}>
+      <a href=/research>
+        <span lang=en>Research</span>
+        <span class=phon lang=en-fonipa-x-emic>ɹisɚt͡ʃ</span>
+      </a>
+    </li>
+    <li {{ 'class=current aria-current=page' if page.url == '/cv/' }}>
+      <a href=/cv>
+        <span lang=en>Curriculum Vitae</span>
+        <span class=phon lang=en-fonipa-x-emic>kəɹɪkjələm vitaᶦ</span>
+      </a>
+    </li>
+    <li>
+      <a href=https://digitallinguistics.io target=_blank rel=noopener>
+        <span lang=en>Digital Linguistics</span>
+        <span class=phon lang=en-fonipa-x-emic>dɪd͡ʒɪtəl lɪŋgwɪstɪks</span>
+      </a>
+    </li>
+    <li>
+      <a href=https://linguisticdiscovery.com target=_blank rel=noopener>
+        <span lang=en>Linguistic Discovery</span>
+        <span class=phon lang=en-fonipa-x-emic>lɪŋgwɪstɪk dɪskʌvəɹi</span>
+      </a>
+    </li>
+    <li {{ 'class=current aria-current=page' if page.url == '/about/' }}>
+      <a href=/about>
+        <span lang=en>About</span>
+        <span class=phon lang=en-fonipa-x-emic>əbaᶷt</span>
+      </a>
+    </li>
+    <li {{ 'class=current aria-current=page' if page.url == '/contact/' }}>
+      <a href=/contact>
+        <span lang=en>Contact</span>
+        <span class=phon lang=en-fonipa-x-emic>kɑntækt</span>
+      </a>
+    </li>
+  </ul>
+
+</nav>
