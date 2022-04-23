@@ -40,6 +40,8 @@
     "html-minifier": "^4.0.0",
     "less": "^4.1.2",
     "mocha": "^9.2.2",
-    "stylelint": "^14.6.1"
+    "readdirp": "^3.6.0",
+    "stylelint": "^14.6.1",
+    "svgstore": "^3.0.1"
   }
 }
