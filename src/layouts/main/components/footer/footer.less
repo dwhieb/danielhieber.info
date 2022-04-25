@@ -1,0 +1,74 @@
+@import (reference) 'styles/utilities.less';
+
+.footer {
+
+  @footer-breakpoint: 45em;
+
+  align-items    : center;
+  justify-content: space-around;
+  padding        : var(--space);
+
+  .academia {
+    padding: 0.125em;
+  }
+
+  .copyright {
+    padding: var(--text-padding);
+  }
+
+  .github {
+
+    align-items   : center;
+    flex-direction: column;
+    text-align    : center;
+
+    .icon-link {
+      display: flex;
+    }
+
+    svg {
+      --icon-size: 2.5em;
+      block-size : var(--icon-size);
+      inline-size: var(--icon-size);
+    }
+
+    .text-link {
+      padding: var(--text-padding);
+    }
+
+  }
+
+  .social {
+
+    align-items   : center;
+    flex-direction: column;
+    text-align    : center;
+
+    span {
+      font-size: x-large;
+    }
+
+    svg {
+      --icon-size: 1.5em;
+      block-size : var(--icon-size);
+      inline-size: var(--icon-size);
+      margin     : 0.25em;
+    }
+
+  }
+
+  .sr-text {
+    .visually-hidden;
+  }
+
+  @media (max-width: @footer-breakpoint) {
+
+    flex-direction: column-reverse;
+
+    & > * {
+      margin-block-end: var(--space-lg);
+    }
+
+  }
+
+}
