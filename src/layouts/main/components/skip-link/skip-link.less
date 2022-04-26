@@ -6,10 +6,14 @@
   // Apply this here rather than in the HTML to avoid specificity issues.
   .link;
 
-  border-radius        : var(--border-radius);
-  margin               : var(--space-xs);
-  padding              : var(--text-padding);
-  position             : absolute;
+  --border-thickness: 0.125em;
+
+  background-color: white;
+  border          : var(--border-thickness) solid black;
+  border-radius   : var(--border-radius);
+  margin          : var(--space-xs);
+  padding         : var(--text-padding);
+  position        : absolute;
 
   &:focus {
     outline: none;
@@ -17,11 +21,6 @@
 
   &:not(:focus) {
     .visually-hidden;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background-color: white;
-    border          : var(--border-thickness) solid black;
   }
 
   @media (prefers-color-scheme: dark) {
