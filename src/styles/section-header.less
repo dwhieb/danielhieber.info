@@ -1,10 +1,18 @@
 @import (reference) 'styles/heading.less';
 
 .section-header {
+
+  --border-width: 0.0325em;
+
   .heading;
-  border-block  : 0.0325em solid black;
+  border-block  : var(--border-width) solid black;
   font-size     : 1.625em;
   margin-block  : var(--space-xxxs);
   padding-inline: 0.5rem;
   padding-block : var(--text-block-padding-sm);
+
+  @media (prefers-color-scheme: dark) {
+    border-block: var(--border-width) solid var(--text-color-dark);
+  }
+
 }
