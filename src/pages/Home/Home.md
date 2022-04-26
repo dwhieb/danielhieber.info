@@ -1,0 +1,44 @@
+---
+title      : Home
+permalink  : /
+---
+
+<!-- <main id=main class=home-page> -->
+<!-- <h1 class=page-title>Home</h1> -->
+
+# Home
+
+<!-- headshot here (circular? with text around?) -->
+
+Hello, I'm Danny! 👋🏼 I am a linguist. 🗣️
+
+I work to document and revitalize endangered languages, while studying the crosslinguistic patterns we see across the world's languages (a field known as **linguistic typology**).
+
+I work primarily with the [Chitimacha Tribe of Louisiana][Chitimacha] to help them [revitalize their once-dormant language][GradSlam]. We are using archival materials to produce a modern dictionary and grammar of the language.
+
+I also run the [Digital Linguistics][DLx] (DLx) project, which provides data formats and web-based tools for working with linguistic data.
+
+<!-- Grad Slam photo here -->
+
+I am an avid science communicator, creating educational videos about language and linguistics for popular audiences on platforms like [TikTok] and [YouTube]. Check out the [Linguistic Discovery website][LingDiscovery] for more!
+
+I earned my M.A. and Ph.D. in linguistics from the University of California, Santa Barbara, and my B.A. in linguistics and philosophy from the College of William & Mary in Virginia. Prior to and during graduate school I worked for [Rosetta Stone][RS]’s [Endangered Language Program][ELP] to create language-learning software with Native American communities.
+
+During my career, I have worked with the [Chitimacha], [Plains Cree][Cree], [Gusii], [Iñupiaq], [Luiseño], [Mixtec], [Navajo], and [Swahili] language communities.
+
+<!-- LINKS -->
+[Chitimacha]:    https://en.wikipedia.org/wiki/Chitimacha
+[Cree]:          https://en.wikipedia.org/wiki/Cree_language
+[DLx]:           https://digitallinguistics.io/
+[ELP]:           https://www.rosettastone.com/languages/endangered
+[GradSlam]:      https://time.com/3975016/chitimacha-language-comeback/
+[Gusii]:         https://en.wikipedia.org/wiki/Gusii_language
+[Iñupiaq]:       https://en.wikipedia.org/wiki/I%C3%B1upiaq_language
+[LingDiscovery]: https://linguisticdiscovery.com
+[Luiseño]:       https://en.wikipedia.org/wiki/Luise%C3%B1o_language
+[Mixtec]:        https://en.wikipedia.org/wiki/Mixtec_language
+[Navajo]:        https://en.wikipedia.org/wiki/Navajo_language
+[RS]:            https://rosettastone.com/
+[Swahili]:       https://en.wikipedia.org/wiki/Swahili_language
+[TikTok]:        https://www.tiktok.com/@linguisticdiscovery
+[YouTube]:       https://www.youtube.com/c/LinguisticDiscovery

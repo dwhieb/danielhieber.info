@@ -20,6 +20,12 @@
         <span class=phon lang=en-fonipa-x-emic>ɹisɚt͡ʃ</span>
       </a>
     </li>
+    <li {{ 'class=current aria-current=page' if page.url == '/publications/' }}>
+      <a href={{ "#" if page.url == '/publications/' else "/publications" | url }}>
+        <span lang=en>Publications</span>
+        <span class=phon lang=en-fonipa-x-emic>pʌblɪkeᶦʃənz</span>
+      </a>
+    </li>
     <li {{ 'class=current aria-current=page' if page.url == '/cv/' }}>
       <a href={{ "#" if page.url == '/cv/' else "/cv" | url }}>
         <span lang=en>Curriculum Vitae</span>
@@ -36,12 +42,6 @@
       <a href=https://linguisticdiscovery.com target=_blank rel=noopener>
         <span lang=en>Linguistic Discovery</span>
         <span class=phon lang=en-fonipa-x-emic>lɪŋgwɪstɪk dɪskʌvəɹi</span>
-      </a>
-    </li>
-    <li {{ 'class=current aria-current=page' if page.url == '/about/' }}>
-      <a href={{ "#" if page.url == '/about/' else "/about" | url }}>
-        <span lang=en>About</span>
-        <span class=phon lang=en-fonipa-x-emic>əbaᶷt</span>
       </a>
     </li>
     <li {{ 'class=current aria-current=page' if page.url == '/contact/' }}>
