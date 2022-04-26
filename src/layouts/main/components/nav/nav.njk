@@ -15,7 +15,7 @@
       </a>
     </li>
     <li {{ 'class=current aria-current=page' if page.url == '/research/' }}>
-      <a {{ "href=#" if page.url == '/research/' else "href=/research" | url }}>
+      <a {{ "href=#" if page.url == '/research/' else ("href=/research" | url) }}>
         <span lang=en>Research</span>
         <span class=phon lang=en-fonipa-x-emic>ɹisɚt͡ʃ</span>
       </a>
