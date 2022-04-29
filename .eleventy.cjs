@@ -1,6 +1,8 @@
+const createMarkdownParser   = require(`markdown-it`)
 const createSpriteCollection = require(`svgstore`)
 const { extname }            = require(`path`)
 const less                   = require(`less`)
+const markdownAttributes     = require(`markdown-it-attrs`)
 const minifier               = require(`html-minifier`)
 const path                   = require(`path`)
 const { readFile }           = require(`fs/promises`)
@@ -18,6 +20,13 @@ const lessOptions = {
     `src/layouts/main`,
   ],
 }
+
+const markdownParser = createMarkdownParser({
+  html       : true,
+  quotes     : `“”‘’`,
+  typographer: true,
+})
+.use(markdownAttributes)
 
 const minifyOptions = {
   collapseWhitespace   : true,
@@ -77,6 +86,10 @@ function convertLESS(input, cb) {
   .then(({ css }) => cb(null, css))
 }
 
+function convertMarkdown(content) {
+  return markdownParser.render(content)
+}
+
 function minifyHTML(content) {
 
   const ext = extname(this.outputPath)
@@ -93,10 +106,12 @@ module.exports = function eleventy(config) {
 
   config.addNunjucksAsyncFilter(`css`, convertLESS)
   config.addNunjucksAsyncShortcode(`sprites`, compileSprites)
+  config.addPairedShortcode(`md`, convertMarkdown)
   config.addPassthroughCopy(`src/favicon.svg`)
   config.addPassthroughCopy(`src/fonts/**/*.woff2`)
   config.addPassthroughCopy(`src/images`)
   config.addTransform(`min-html`, minifyHTML)
+  config.setLibrary(`md`, markdownParser)
 
   return {
     dir: {

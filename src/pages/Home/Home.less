@@ -1,3 +1,38 @@
+@import (reference) 'styles/link.less';
+
 .home-page {
+
+  align-self : center;
+  font-size  : x-large;
+  font-weight: 300;
+  margin     : var(--space);
+  max-width  : var(--measure-sm);
+
+  a {
+    .link;
+    font-weight              : 500;
+    text-decoration-thickness: revert;
+  }
+
+  a::after {
+    --icon-size: 0.65em;
+  }
+
+  .dfn {
+    font-weight: 500;
+  }
+
+  .intro {
+    font-size     : xx-large;
+    padding-inline: 0.75rem;
+  }
+
+  p {
+    padding: var(--text-padding);
+  }
+
+  strong {
+    font-weight: 500;
+  }
 
 }
