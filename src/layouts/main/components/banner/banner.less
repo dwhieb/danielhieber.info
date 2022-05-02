@@ -16,20 +16,24 @@
   .name-eng {
     .heading;
     font-size: 4em;
-    position : relative;
+  }
+
+  .name-eng a {
+    position: relative;
+  }
+
+  .name-eng a::after {
+    content        : 'Ph.D.';
+    font-size      : x-large;
+    inset-block-end: 0;
+    padding-block  : 0.4em;
+    padding-inline : var(--text-inline-padding);
+    position       : absolute;
   }
 
   .name-ipa {
     .heading;
     font-size: xx-large;
-  }
-
-  small {
-    font-size          : x-large;
-    inset-block-end    : 0.625em;
-    left               : 100%; // fix for WebKit
-    margin-inline-start: 0.5em;
-    position           : absolute;
   }
 
   .tagline {
