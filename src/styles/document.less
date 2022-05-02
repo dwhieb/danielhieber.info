@@ -1,9 +1,50 @@
+@import (reference) 'abbreviation.less';
+@import (reference) 'bulleted.less';
+@import (reference) 'definition.less';
+@import (reference) 'link.less';
+@import (reference) 'page-title.less';
+@import (reference) 'paragraph.less';
+@import (reference) 'section-header.less';
+@import (reference) 'strong.less';
+
 .document {
 
   display: block;
 
+  a {
+    .link;
+  }
+
+  abbr {
+    .abbr;
+  }
+
+  dfn {
+    .dfn;
+  }
+
+  h1 {
+    .page-title;
+  }
+
+  h2 {
+    .section-header;
+  }
+
+  h3 {
+    .subsection-header;
+  }
+
   p {
-    padding: var(--text-padding);
+    .p;
+  }
+
+  strong {
+    .strong;
+  }
+
+  ul {
+    .bulleted;
   }
 
 }

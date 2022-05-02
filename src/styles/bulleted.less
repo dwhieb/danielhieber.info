@@ -1,0 +1,18 @@
+.bulleted {
+
+  display            : block;
+  list-style-image   : none;
+  list-style-position: outside;
+  list-style-type    : disc;
+  margin-inline      : 1.5em;
+
+  ::marker {
+    content: '◈';
+  }
+
+  li {
+    display: list-item;
+    padding: var(--text-padding);
+  }
+
+}

@@ -1,0 +1,28 @@
+.research-page {
+
+  align-self     : center;
+  margin         : var(--space);
+  max-inline-size: var(--measure);
+
+  li::marker {
+    content: '📄';
+  }
+
+  li:hover::marker {
+    content: '📖';
+  }
+
+  .software::marker {
+    content: '📦';
+  }
+
+  .software:hover::marker {
+    content: '🔗';
+  }
+
+  ul {
+    margin-block : var(--space-xxs);
+    margin-inline: var(--space-lg);
+  }
+
+}
