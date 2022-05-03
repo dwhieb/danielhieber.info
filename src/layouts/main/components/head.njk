@@ -37,9 +37,7 @@
   {% endset %}
 
   {# preload critical assets #}
-  {% if not page.url == '/cv/' %}
-    <link rel='preload' href={{ '/images/Lake-Louise.webp' | url }} as='image' type='image/webp'>
-  {% endif %}
+  <link rel='preload' href={{ '/images/Lake-Louise.webp' | url }} as='image' type='image/webp'>
   <link rel='preload' href={{ '/fonts/Libertinus/LibertinusSerifDisplay-Regular.woff2' | url }} as='font' type='font/woff2' crossorigin>
   <link rel='preload' href={{ '/fonts/FiraSans/FiraSans-Light.woff2' | url }} as='font' type='font/woff2' crossorigin>
 

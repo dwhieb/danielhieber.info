@@ -1,0 +1,59 @@
+@import 'styles/link.less';
+@import 'styles/pub-title.less';
+
+.publications-page {
+
+  cite {
+    .pub-title;
+  }
+
+  .cv-item {
+    align-items          : baseline;
+    display              : grid;
+    font-size            : large;
+    grid-template-areas:
+      'date citation'
+      '.    links';
+    grid-template-columns: 7.5em auto;
+  }
+
+  .cv-list {
+    flex-direction: column;
+    gap           : var(--space);
+  }
+
+  .link::after {
+    display: none;
+  }
+
+  .links {
+
+    gap           : var(--text-inline-padding);
+    grid-area     : links;
+    padding-inline: var(--text-inline-padding);
+
+    .link::before {
+      content: '(';
+      display: inline-block;
+    }
+
+    .link::after {
+      all    : revert;  // override external link styles
+      content: ')';
+      display: inline-block;
+    }
+
+  }
+
+  p {
+    grid-area: citation;
+    padding  : var(--text-padding);
+  }
+
+  time {
+    grid-area  : date;
+    padding    : var(--text-padding);
+    white-space: nowrap;
+  }
+
+}
