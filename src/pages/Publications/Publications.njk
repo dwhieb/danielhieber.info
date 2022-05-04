@@ -10,11 +10,19 @@ permalink: /publications/
   {{ less | css | safe }}
 </style>
 
+{% set softwareStyles %}
+  {% include 'software.less' %}
+{% endset %}
+
+<style>
+  {{ softwareStyles | css | safe }}
+</style>
+
 <main id=main class=publications-page>
 
   <h1 class=page-title>Publications & Presentations</h1>
 
-  <p class=intro>All publications may be downloaded at the links below.</p>
+  <p class=intro>All publications may be downloaded at the links below. My work is also availabe on <a class=link href=https://www.researchgate.net/profile/Daniel-Hieber>ResearchGate</a> and <a class=link href=https://independent.academia.edu/DanielHieber>Academia.edu</a>.</p>
 
   <section id=articles class=articles>
     <h2 class=section-header>Articles & Chapters</h2>
@@ -313,8 +321,8 @@ permalink: /publications/
 
   <section id=software class=software>
     <h2 class=section-header>Software</h2>
-    <ul class=cv-list>
-
+    <p style='align-self: center; text-align: center;'><a class=link href=https://github.com/dwhieb>View my GitHub profile here.</a></p>
+    {% include 'software.njk' %}
     </ul>
   </section>
 
@@ -347,13 +355,3 @@ permalink: /publications/
   </section>
 
 </main>
-
-
-<li class=pub-item>
-  <time datetime=YYYY>YYYY</time>
-  <p><a class=link href=link>Title</a>. Details. DOI: <a class='link subtle' href=https://doi.org/12345>12345</a>.</p>
-  <ul class=links>
-    <li><a class='link subtle' href=link>abstract</a></li>
-    <li><a class='link subtle' href=link>slides</a></li>
-  </ul>
-</li>

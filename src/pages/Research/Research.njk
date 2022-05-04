@@ -11,6 +11,14 @@ permalink  : /research/
   {{ less | css | safe }}
 </style>
 
+{% set softwareStyles %}
+  {% include 'software.less' %}
+{% endset %}
+
+<style>
+  {{ softwareStyles | css | safe }}
+</style>
+
 <main id=main class='document research-page'>
 
 {% md %}
@@ -61,12 +69,7 @@ Digital Linguistics (DLx) is concerned with the digital storage, representation,
 
 ### Relevant Projects
 
-- [The Data Format for Digital Linguistics](https://format.digitallinguistics.io){target=_blank} (<abbr class=abbr title='Data Format for Digital Linguistics'>DaFoDiL</abbr>): A standard JSON format for storing and exchanging linguistic data on the web. {.software}
-- [Scription](https://scription.digitallinguistics.io){target=_blank}: A standard for writing interlinear glosses that are computer-parseable, while adhering to the same conventions linguists are already using (especially the Leipzig Glossing Rules). {.software}
-- [scription2dlx](https://github.com/digitallinguistics/scription2dlx){target=_blank}: A JavaScript library for converting data in Scription format to JSON. {.software}
-- [transliterate](https://github.com/digitallinguistics/transliterate){target=_blank}: A JavaScript library for transliterating strings between different orthographies. {.software}
-- [styles](https://github.com/digitallinguistics/styles){target=_blank}: CSS styles for formatting linguistic data on the web. {.software}
-- [word-aligner](https://github.com/digitallinguistics/word-aligner){target=_blank}: A JavaScript library for vertically aligning interlinear glosses. {.software}
+{% include 'software.njk' %}
 
 ## Discourse & Prosody
 

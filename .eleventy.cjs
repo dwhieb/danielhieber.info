@@ -116,7 +116,7 @@ module.exports = function eleventy(config) {
   return {
     dir: {
       data    : `data`,
-      includes: `components`,
+      includes: `partials`,
       input   : `src`,
       layouts : `layouts`,
       output  : `site`,
