@@ -1,25 +1,42 @@
+@import 'styles/abbreviation.less';
 @import 'styles/link.less';
 @import 'styles/pub-title.less';
+@import 'styles/superscript.less';
 
 .publications-page {
+
+  abbr {
+    .abbr;
+  }
+
+  .additional-info {
+    flex-direction: column;
+    grid-area     : info;
+  }
+
+  .award::marker {
+    content: '🏅';
+  }
+
+  .bulleted {
+    margin-inline: var(--space-lg);
+  }
 
   cite {
     .pub-title;
   }
 
-  .cv-item {
-    align-items          : baseline;
-    display              : grid;
-    font-size            : large;
-    grid-template-areas:
-      'date citation'
-      '.    links';
-    grid-template-columns: 7.5em auto;
-  }
-
   .cv-list {
     flex-direction: column;
-    gap           : var(--space);
+    gap           : var(--space-xs);
+  }
+
+  .first-place::marker {
+    content: '🥇';
+  }
+
+  .intro {
+    text-align: center;
   }
 
   .link::after {
@@ -45,9 +62,39 @@
 
   }
 
+  .location::marker {
+    content: '📍';
+  }
+
+  .media {
+    grid-area   : media;
+    justify-self: center;
+    margin      : var(--space-sm);
+  }
+
   p {
     grid-area: citation;
     padding  : var(--text-padding);
+  }
+
+  .pub-item {
+    align-items: baseline;
+    display: grid;
+    font-size: large;
+    grid-template-areas:
+      'date citation'
+      '.    links'
+      '.    info'
+      '.    media';
+    grid-template-columns: 7.5em auto;
+  }
+
+  .second-place::marker {
+    content: '🥈';
+  }
+
+  sup {
+    .sup;
   }
 
   time {
