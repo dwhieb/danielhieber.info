@@ -26,6 +26,17 @@
     .pub-title;
   }
 
+  .cover {
+
+    grid-area    : cover;
+    margin-inline: var(--space-xs);
+
+    img {
+      width: 5em;
+    }
+
+  }
+
   .cv-list {
     flex-direction: column;
     gap           : var(--space-xs);
@@ -78,15 +89,15 @@
   }
 
   .pub-item {
-    align-items: baseline;
-    display: grid;
-    font-size: large;
+    align-items        : baseline;
+    display            : grid;
+    font-size          : large;
     grid-template-areas:
-      'date citation'
-      '.    links'
-      '.    info'
-      '.    media';
-    grid-template-columns: 7.5em auto;
+      'date citation cover'
+      '.    links cover'
+      '.    info cover'
+      '.    media cover';
+    grid-template-columns: 7.5em auto auto;
   }
 
   .second-place::marker {
