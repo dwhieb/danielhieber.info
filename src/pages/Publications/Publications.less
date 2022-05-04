@@ -1,6 +1,7 @@
 @import 'styles/abbreviation.less';
 @import 'styles/link.less';
 @import 'styles/pub-title.less';
+@import 'styles/strong.less';
 @import 'styles/superscript.less';
 
 .publications-page {
@@ -78,9 +79,15 @@
   }
 
   .media {
-    grid-area   : media;
-    justify-self: center;
-    margin      : var(--space-sm);
+    align-items   : center;
+    flex-direction: column;
+    grid-area     : media;
+    justify-self  : center;
+    margin        : var(--space-sm);
+  }
+
+  .new-tab {
+    padding: var(--text-padding);
   }
 
   p {
@@ -102,6 +109,10 @@
 
   .second-place::marker {
     content: '🥈';
+  }
+
+  strong {
+    .strong;
   }
 
   sup {
