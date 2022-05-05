@@ -18,6 +18,10 @@
     color: var(--secondary);
   }
 
+  &:visited * {
+    color: var(--secondary);
+  }
+
   &:not([href*='danielhieber.info'], [href^='#'], [href^='/']) {
 
     --icon-size: 0.8em;
@@ -52,6 +56,10 @@
     color: var(--primary-dark);
 
     &:visited {
+      color: var(--secondary-dark);
+    }
+
+    &:visited * {
       color: var(--secondary-dark);
     }
 
