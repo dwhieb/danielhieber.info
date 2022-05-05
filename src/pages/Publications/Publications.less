@@ -1,8 +1,11 @@
+@import 'styles/utilities.less';
 @import 'styles/abbreviation.less';
 @import 'styles/pub-title.less';
 @import 'styles/strong.less';
 @import 'styles/superscript.less';
 @import 'styles/transcription.less';
+
+@pubs-breakpoint: 50em;
 
 .publications-page {
 
@@ -47,7 +50,11 @@
     content: '🥇';
   }
 
-  .intro {
+  .iframe {
+    width: 100%;
+  }
+
+  .intro.centered {
     text-align: center;
   }
 
@@ -81,6 +88,7 @@
   .media {
     align-items   : center;
     flex-direction: column;
+    inline-size   : 80%;
     grid-area     : media;
     justify-self  : center;
     margin        : var(--space-sm);
@@ -91,11 +99,11 @@
   }
 
   p {
-    grid-area: citation;
-    padding  : var(--text-padding);
+    padding: var(--text-padding);
   }
 
   .pub-item {
+
     align-items        : baseline;
     display            : grid;
     font-size          : large;
@@ -105,10 +113,19 @@
       '.    info cover'
       '.    media cover';
     grid-template-columns: 7.5em auto auto;
+
+    & > p {
+      grid-area: citation;
+    }
+
   }
 
   .second-place::marker {
     content: '🥈';
+  }
+
+  .slides-com {
+    aspect-ratio: 576 / 420;
   }
 
   .software-list {
@@ -127,6 +144,76 @@
     grid-area  : date;
     padding    : var(--text-padding);
     white-space: nowrap;
+  }
+
+  .yt {
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (max-width: @pubs-breakpoint) {
+
+    inline-size: 100%;
+
+    .bulleted {
+      margin-inline-start: 3.5em;
+    }
+
+    .cover {
+
+      align-self   : center;
+      margin-inline: 2em;
+      width        : 25%;
+
+      img {
+        width: 100%;
+      }
+
+    }
+
+    .pub-item:not(:last-child)::after {
+      align-self      : center;
+      background-color: #DDD;
+      content         : '';
+      height          : 0.05em;
+      margin          : 0.5rem 0;
+      width           : 90%;
+    }
+
+    h2, h3 {
+      padding-inline: 1rem;
+    }
+
+    .links {
+      margin-inline : 1em;
+      padding-inline: var(--text-inline-padding-lg);
+    }
+
+    .media {
+      align-self   : stretch;
+      inline-size  : auto;
+      margin-inline: 2em;
+    }
+
+    p {
+      margin-inline: var(--space);
+      padding      : var(--text-padding-lg);
+    }
+
+    .pub-item {
+      display       : flex;
+      flex-direction: column;
+    }
+
+    time {
+      font-size     : larger;
+      font-weight   : 600;
+      padding-inline: 1rem;
+    }
+
+    time:not(.first-year) {
+      .visually-hidden;
+    }
+
   }
 
 }
