@@ -1,5 +1,7 @@
 .home-page {
 
+  @home-breakpoint: 50em;
+
   font-size  : x-large;
   font-weight: 300;
   max-width  : var(--measure-sm);
@@ -20,13 +22,11 @@
   }
 
   .headshot {
-    aspect-ratio      : 1;
-    clip-path         : circle(50% at center);
-    float             : left;
-    inline-size       : 15em;
-    margin-inline-end : 1em;
-    margin-block-start: 1em;
-    shape-outside     : circle(50%);
+    aspect-ratio : 1;
+    clip-path    : circle(50% at center);
+    inline-size  : 15em;
+    margin       : auto;
+    shape-outside: circle(50%);
   }
 
   .intro {
@@ -37,6 +37,15 @@
   // override default strong style
   strong {
     font-weight: 500;
+  }
+
+  // large screens
+  @media (min-width: @home-breakpoint) {
+    .headshot {
+      float        : left;
+      margin-inline: 0em var(--space);
+      margin-block : var(--space) 0em;
+    }
   }
 
 }
