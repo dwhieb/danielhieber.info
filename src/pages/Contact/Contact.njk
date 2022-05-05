@@ -2,6 +2,38 @@
 title      : Contact
 permalink  : /contact/
 ---
-<main id=main>
+
+{% set less %}
+  {% include './Contact.less' %}
+{% endset %}
+
+<style>
+  {{ less | css | safe }}
+</style>
+
+<main id=main class=contact-page>
+
   <h1 class=page-title>Contact</h1>
+
+  <section class=social>
+    <h2>Connect with me on social media! 📲</h2>
+    {% include 'social-icons.njk' %}
+  </section>
+
+  <section class=email>
+    <h2>Email 📧</h2>
+    <p>Email me at <a class=link href=mailto:dwhieb@gmail.com>dwhieb@gmail.com</a>.</p>
+  </section>
+
+  <section class=media>
+    <h2>Media Inquiries 🎙️</h2>
+    <p>I’m available for interviews, guest appearances, livestreams, talks, panels, and other events. I speak on anything relating to language and linguistics, especially linguistic diversity, language change, the science of language, and indigenous languages. I run <a class=link href=https://linguisticdiscovery.com>Linguistic Discovery</a>, a channel dedicated to educating the public about the science and diversity of language. <a class=link href='https://www.youtube.com/watch?v=Md7Wku6nGoE&t=11s'>Watch an award-winning 3-minute talk of mine here</a>, or <a class=link href=https://www.youtube.com/c/LinguisticDiscovery>check out my YouTube channel here</a>. As a member of the LGBTQ 🏳️‍🌈 community I’m also happy to participate in or otherwise support LGBTQ-themed events.</p>
+  </section>
+
+  <section class=brands>
+    <h2>Brands 🏷️</h2>
+    <p>I’m available for brand collaborations! I have a large following on TikTok (> 130,000 followers as of April 2022) of people who are fascinated by language, linguistics, and language learning. If you think your product or service is a good fit for me and my audience, let’s talk!</p>
+    <p>You can view my TikTok stats and demographics at the <a class=link href=https://linguisticdiscovery.com/contact/>Linguistic Discovery website</a>.</p>
+  </section>
+
 </main>

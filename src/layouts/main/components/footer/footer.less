@@ -1,3 +1,4 @@
+@import (reference) 'social-icons.less';
 @import (reference) 'styles/utilities.less';
 
 .footer {
@@ -39,26 +40,17 @@
   }
 
   .social {
-
     align-items   : center;
     flex-direction: column;
     text-align    : center;
-
-    span {
-      font-size: x-large;
-    }
-
-    svg {
-      --icon-size: 1.5em;
-      block-size : var(--icon-size);
-      inline-size: var(--icon-size);
-      margin     : 0.25em;
-    }
-
   }
 
-  .sr-text {
-    .visually-hidden;
+  .social-header {
+    font-size: x-large;
+  }
+
+  .social-icons {
+    .social-icons;
   }
 
   @media (max-width: @footer-breakpoint) {

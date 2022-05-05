@@ -17,6 +17,7 @@ const lessOptions = {
   },
   paths: [
     `src`,
+    `src/partials`,
     `src/layouts/main`,
   ],
 }
