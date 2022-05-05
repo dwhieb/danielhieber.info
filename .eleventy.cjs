@@ -9,12 +9,6 @@ const { readFile }           = require(`fs/promises`)
 const recurse                = require(`readdirp`)
 
 const lessOptions = {
-  globalVars: {
-    // These values need to be wrapped in quotes in order for the LESS files to compile.
-    // This is because LESS outputs the bare text of the variable, which would result
-    // in an unquote path/url, which is invalid CSS.
-    pathPrefix: process.env.GITHUB_ACTIONS ? `'/danielhieber.info'` : `''`,
-  },
   paths: [
     `src`,
     `src/partials`,
@@ -122,7 +116,6 @@ module.exports = function eleventy(config) {
       layouts : `layouts`,
       output  : `site`,
     },
-    pathPrefix     : process.env.GITHUB_ACTIONS ? `danielhieber.info`: ``,
     templateFormats: [`ico`, `md`, `njk`],
   }
 
