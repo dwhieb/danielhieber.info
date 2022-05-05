@@ -69,12 +69,13 @@
     padding-inline: var(--text-inline-padding);
 
     .link::before {
+      all    : revert;        // avoids coloring opening parenthesis
       content: '(';
       display: inline-block;
     }
 
     .link::after {
-      all    : revert;  // override external link styles
+      all    : revert;        // override external link styles
       content: ')';
       display: inline-block;
     }
