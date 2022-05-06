@@ -1,14 +1,17 @@
-@import (reference) 'software.less';
-@import 'styles/utilities.less';
+// NOTE: This stylesheet contains styles for both the CV and Publications pages,
+// even classes and elements that are specific to one page or another.
+
+@import 'software.less';
 @import 'styles/abbreviation.less';
 @import 'styles/pub-title.less';
 @import 'styles/strong.less';
 @import 'styles/superscript.less';
 @import 'styles/transcription.less';
+@import 'styles/utilities.less';
 
-@pubs-breakpoint: 50em;
+@cv-breakpoint: 50em;
 
-.publications-page {
+.cv-page {
 
   abbr {
     .abbr;
@@ -42,9 +45,27 @@
 
   }
 
+  .cv-item {
+
+    align-items: baseline;
+    display: grid;
+    font-size: large;
+    grid-template-areas:
+      'date citation cover'
+      '.    links cover'
+      '.    info cover'
+      '.    media cover';
+    grid-template-columns: 7.5em auto auto;
+
+    & > p {
+      grid-area: citation;
+    }
+
+  }
+
   .cv-list {
     flex-direction: column;
-    gap           : var(--space-xs);
+    gap: var(--space-xs);
   }
 
   .first-place::marker {
@@ -104,24 +125,6 @@
     padding: var(--text-padding);
   }
 
-  .pub-item {
-
-    align-items        : baseline;
-    display            : grid;
-    font-size          : large;
-    grid-template-areas:
-      'date citation cover'
-      '.    links cover'
-      '.    info cover'
-      '.    media cover';
-    grid-template-columns: 7.5em auto auto;
-
-    & > p {
-      grid-area: citation;
-    }
-
-  }
-
   .second-place::marker {
     content: '🥈';
   }
@@ -131,7 +134,6 @@
   }
 
   .software-list {
-    .software-list;
     font-size: large;
   }
 
@@ -153,7 +155,7 @@
     aspect-ratio: 16 / 9;
   }
 
-  @media (max-width: @pubs-breakpoint) {
+  @media (max-width: @cv-breakpoint) {
 
     inline-size: 100%;
 
@@ -173,7 +175,12 @@
 
     }
 
-    .pub-item:not(:last-child)::after {
+    .cv-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cv-item:not(:last-child)::after {
       align-self      : center;
       background-color: #DDD;
       content         : '';
@@ -200,11 +207,6 @@
     p {
       margin-inline: var(--space);
       padding      : var(--text-padding-lg);
-    }
-
-    .pub-item {
-      display       : flex;
-      flex-direction: column;
     }
 
     time {
