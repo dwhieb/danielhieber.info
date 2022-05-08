@@ -71,7 +71,7 @@
     display              : grid;
     column-gap           : var(--space);
     grid-template-columns: max-content max-content;
-    margin-inline        : var(--space-sm);
+    margin               : var(--space-xxs);
 
     dt {
       font-weight   : 500;
@@ -106,9 +106,8 @@
 
   .links {
 
-    gap           : var(--text-inline-padding);
-    grid-area     : links;
-    padding-inline: var(--text-inline-padding);
+    gap      : var(--text-inline-padding);
+    grid-area: links;
 
     .link::before {
       all    : revert;        // avoids coloring opening parenthesis
