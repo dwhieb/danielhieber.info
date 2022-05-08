@@ -52,7 +52,6 @@
   .cv-item {
     align-items        : baseline;
     display            : grid;
-    font-size          : large;
     grid-template-areas:
       'date citation cover'
       '.    links cover'
@@ -63,14 +62,15 @@
 
   .cv-list {
     flex-direction: column;
-    gap: var(--space-xs);
+    font-size     : large;
+    gap           : var(--space-xs);
   }
 
   .def-list {
 
     display              : grid;
     column-gap           : var(--space);
-    grid-template-columns: max-content max-content;
+    grid-template-columns: max-content auto;
     margin               : var(--space-xxs);
 
     dt {
@@ -156,9 +156,34 @@
     .strong;
   }
 
+  summary {
+
+    cursor: pointer;
+
+    p {
+      display: inline;
+    }
+
+  }
+
   sup {
     .sup;
   }
+
+  .teaching {
+
+    .cv-list {
+      margin-block:  var(--space-xxs);
+      margin-inline: var(--space-xs);
+    }
+
+    details > p {
+      padding      : var(--text-padding);
+      margin-inline: var(--space-xs);
+    }
+
+  }
+
 
   time {
     grid-area  : date;
