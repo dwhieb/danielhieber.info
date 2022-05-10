@@ -3,6 +3,7 @@
 
 @import 'software.less';
 @import 'styles/abbreviation.less';
+@import 'styles/code.less';
 @import 'styles/pub-title.less';
 @import 'styles/strong.less';
 @import 'styles/superscript.less';
@@ -36,6 +37,10 @@
 
   cite {
     .pub-title;
+  }
+
+  code {
+    .code;
   }
 
   .cover {
@@ -184,6 +189,14 @@
 
   }
 
+  table {
+    font-size: large;
+    margin   : var(--space-xs);
+  }
+
+  thead {
+    font-weight: bold;
+  }
 
   time {
     grid-area  : date;
@@ -195,6 +208,15 @@
     aspect-ratio: 16 / 9;
   }
 
+  // large screens
+  @media (min-width: @cv-breakpoint) {
+    :is(td, th):nth-child(3),
+    :is(td, th):nth-child(4) {
+      text-align: center;
+    }
+  }
+
+  // small screens
   @media (max-width: @cv-breakpoint) {
 
     inline-size: 100%;
@@ -247,6 +269,66 @@
     p {
       margin-inline: var(--space);
       padding      : var(--text-padding-lg);
+    }
+
+    // languages table
+    table {
+      display: contents;
+    }
+
+    tbody {
+      align-self    : center;
+      display       : flex;
+      flex-direction: column;
+      inline-size   : fit-content;
+      margin-block  : var(--space-sm);
+      margin-inline : var(--space-lg);
+      row-gap       : var(--space-xs);
+    }
+
+    td {
+      display: flex;
+    }
+
+    // Language Name
+    td:first-child {
+      font-weight: bold;
+    }
+
+    // non-header columns
+    td:not(:first-child)::before {
+      font-family   : var(--font);
+      inline-size   : 10em;
+      padding-inline: var(--text-inline-padding);
+    }
+
+    // Autonym
+    td:nth-child(2)::before {
+      content: 'Autonym:';
+    }
+
+    // Glottocode
+    td:nth-child(3)::before {
+      content: 'Glottocode:';
+    }
+
+    // ISO 639-3 Code
+    td:nth-child(4)::before {
+      content: 'ISO 639-3 Code:';
+    }
+
+    // Proficiency
+    td:nth-child(5)::before {
+      content: 'Proficiency:';
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      display       : flex;
+      flex-direction: column;
     }
 
     time {
