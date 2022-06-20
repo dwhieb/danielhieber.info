@@ -1,0 +1,87 @@
+---
+title:     Curriculum Vitae
+date:      Last Modified
+layout:    print/print.njk
+permalink: /print/
+---
+{% set less %}
+  {% include './Print.less' %}
+{% endset %}
+
+<style>
+  {{ less | css | safe }}
+</style>
+
+<main id=main class=print-cv-page>
+
+  <header>
+    <h1>Daniel W. Hieber</h1>
+    <p class=phon>ˈdæn.jəl ˈhi.bɚ</p>
+    <p>Diversity Linguist</p>
+    <p>Chitimacha Tribe of Louisiana</p>
+    <p><a href=mailto:dwhieb@gmail.com>dwhieb@gmail.com</a></p>
+    <p><a href=https://danielhieber.info>danielhieber.info</a></p>
+    <p><i>Last updated:</i>{% fulldate %}</p>
+  </header>
+
+  {% include '../CV/Education.njk' %}
+  {% include '../CV/Work.njk' %}
+  {% include '../CV/Teaching.njk' %}
+  {% include '../CV/Awards.njk' %}
+
+  <section id=publications class=publications>
+
+    <h1 class=section-header>Publications & Presentations</h1>
+
+    <section>
+      <h3 class=subsection-header>Articles & Chapters</h3>
+      {% include '../Publications/Articles.njk' %}
+    </section>
+
+    <section>
+      <h3 class=subsection-header>Edited Volumes</h3>
+      {% include '../Publications/Edited.njk' %}
+    </section>
+
+    <section>
+      <h3 class=subsection-header>Theses</h3>
+      {% include '../Publications/Theses.njk' %}
+    </section>
+
+    <section>
+      <h3 class=subsection-header>Presentations</h3>
+      {% include '../Publications/Presentations.njk' %}
+    </section>
+
+    <section>
+      <h3 class=subsection-header>Software</h3>
+      <h4 class=subsubsection-header>Digital Linguistics (DLx)</h4>
+      {% include 'software.njk' %}
+      <h4 class=subsubsection-header>Rosetta Stone</h4>
+      {% include '../Publications/RosettaStone.njk' %}
+    </section>
+
+    <section>
+      <h3 class=subsection-header>Online Articles</h3>
+      {% include '../Publications/Online.njk' %}
+    </section>
+
+    <section>
+      <h3 class=subsection-header>Book Reviews</h3>
+      {% include '../Publications/Reviews.njk' %}
+    </section>
+
+    <section>
+      <h3 class=subsection-header>Non-Linguistic Publications</h3>
+      {% include '../Publications/NonLinguistic.njk' %}
+    </section>
+
+  </section>
+
+  {% include '../CV/Service.njk' %}
+  {% include '../CV/Memberships.njk' %}
+  {% include '../CV/Fieldwork.njk' %}
+  {% include '../CV/Languages.njk' %}
+  {% include '../CV/Programming.njk' %}
+
+</main>

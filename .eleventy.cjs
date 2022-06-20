@@ -85,6 +85,14 @@ function convertMarkdown(content) {
   return markdownParser.render(content)
 }
 
+function fullDate() {
+  return new Date().toLocaleDateString(`en-US`, {
+    day  : `numeric`,
+    month: `long`,
+    year : `numeric`,
+  })
+}
+
 function minifyHTML(content) {
 
   const ext = extname(this.outputPath)
@@ -105,6 +113,7 @@ module.exports = function eleventy(config) {
   config.addPassthroughCopy(`src/favicon.svg`)
   config.addPassthroughCopy(`src/fonts/**/*.woff2`)
   config.addPassthroughCopy(`src/images`)
+  config.addShortcode(`fulldate`, fullDate)
   config.addTransform(`min-html`, minifyHTML)
   config.setLibrary(`md`, markdownParser)
 

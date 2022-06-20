@@ -1,4 +1,5 @@
 <head>
+
   {# critical metadata #}
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
@@ -31,15 +32,15 @@
   {# favicon #}
   <link rel='icon' href={{ 'favicon.svg' | url }} type='image/svg+xml'>
 
-  {# CSS for main layout #}
-  {% set less %}
-    {% include '../index.less' %}
-  {% endset %}
-
   {# preload critical assets #}
   <link rel='preload' href={{ '/images/Lake-Louise.webp' | url }} as='image' type='image/webp'>
   <link rel='preload' href={{ '/fonts/Libertinus/LibertinusSerifDisplay-Regular.woff2' | url }} as='font' type='font/woff2' crossorigin>
   <link rel='preload' href={{ '/fonts/FiraSans/FiraSans-Light.woff2' | url }} as='font' type='font/woff2' crossorigin>
+
+  {# CSS for main layout #}
+  {% set less %}
+    {% include '../index.less' %}
+  {% endset %}
 
   <style>
     {{ less | css | safe }}
