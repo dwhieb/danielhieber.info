@@ -25,7 +25,7 @@
   "scripts": {
     "prebuild": "node build/emptySiteDir.js",
     "build": "npx @11ty/eleventy --config=.eleventy.cjs",
-    "test": "mocha *.test.js",
+    "test": "mocha test/docs.test.js",
     "prestart": "npm run prebuild",
     "start": "npx @11ty/eleventy --config=.eleventy.cjs --serve --port=3003"
   },

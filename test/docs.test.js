@@ -13,7 +13,7 @@ describe(`license`, function() {
 
     const __filename  = fileURLToPath(import.meta.url)
     const __dirname   = getDirname(__filename)
-    const licensePath = joinPath(__dirname, `./LICENSE`)
+    const licensePath = joinPath(__dirname, `../LICENSE`)
     const text        = await readFile(licensePath, `utf8`)
     const yearRegExp  = /2020\u2013(?<year>\d{4})/u // en-dash
     const { year }    = yearRegExp.exec(text).groups

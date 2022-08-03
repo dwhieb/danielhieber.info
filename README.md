@@ -8,9 +8,15 @@ The code in this repository is subject to an [ISC license][ISC]. The content of 
 
 ## Developer Notes
 
+### Deployment
+
+Merge a commit into `main`.
+
+### LESS
+
 Include LESS files as follows:
 
-### Liquid
+#### Liquid
 
 ```liquid
 {% capture css %}
@@ -22,7 +28,7 @@ Include LESS files as follows:
 </style>
 ```
 
-### Nunjucks
+#### Nunjucks
 
 ```
 {% set css %}
