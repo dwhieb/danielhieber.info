@@ -1,7 +1,15 @@
 .abbr {
+
   cursor                  : help;
   text-decoration         : underline;
   text-decoration-skip-ink: auto;
   text-decoration-style   : dotted;
-  text-underline-offset   : 0.1em;
+  text-underline-offset   : 0.15em;
+
+  @supports (text-underline-position: under) {
+    text-underline-offset  : auto;
+    text-underline-position: under;
+  }
+
 }
+
